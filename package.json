@@ -1,0 +1,28 @@
+{
+    "name": "Chatbot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "socket.io": "^2.3.0",
+        "uuid": "^8.3.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kutznera/API-9.22.20.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kutznera/API-9.22.20/issues"
+    },
+    "homepage": "https://github.com/kutznera/API-9.22.20#readme"
+}

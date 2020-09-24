@@ -1,19 +1,19 @@
 const btn = document.querySelector("button");
-cont outputme = document.querySelector(".output-you");
+const outputme = document.querySelector(".output-you");
 const outputbot = document.querySelector(".output-bot");
 
 const SpeechRecognition =
-    window.SpeechRecognition = || window.webkitSpeechRecognition;
+    window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
 
-recognition.lan = "en=US";
+recognition.lang = "en-US";
 recognition.interimResults = false;
 
 btn.addEventListener("click", () => {
     recognition.start();
 });
-console.log("imadeit");
+
 recognition.onresult = function(event) {
     const last = event.results.length - 1;
     const text = event.results[last][0].transcript;
@@ -22,7 +22,11 @@ recognition.onresult = function(event) {
     outputme.textContent = text;
 };
 
+
 const socket = io();
+
+socket.emit("chat message", text);
+
 
 const botReply = (text) => {
     const synth = window.speechSynthesis;
